@@ -38,7 +38,7 @@ Replace APIKEY with a valid api-key obtained by emailing support.
 - ASD - 80% AUC for predicting risk of future ASD diagnosis in 2-year-olds. [Onishchenko et al., Science Advances](https://www.science.org/doi/10.1126/sciadv.abf0354)
 - ADRD - 88% AUC for predicting risk of ADRD diagnosis 1 year ahead.
 
-## API Documentation
+# API Documentation
 
 
 `zcor_predict` is deployed as a cloud function and can be accessed via the following URL endpoint:
