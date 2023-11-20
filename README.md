@@ -128,6 +128,11 @@ Input should be a JSON object that consists of a list of dictionaries, each cont
 
 
 ### Example 2: Complete `curl` commands
+```json
+
+curl -X POST -H "Content-Type: application/json" -d "[{\"patient_id\": \"P28109965201\", \"sex\": \"M\", \"birth_date\": \"01-01-1921\", \"DX_record\": [{\"date\": \"12-16-2011\", \"code\": \"R09.02\"}, {\"date\": \"12-30-2011\", \"code\": \"H04.129\"}, {\"date\": \"12-30-2011\", \"code\": \"H02.109\"}], \"RX_record\": [], \"PROC_record\": [{\"date\": \"09-28-2012\", \"code\": \"71100\"}]]" "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=YOUR_API_KEY"
+```
+
 
 ```json
 curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "12-16-2011", "code": "R09.02"}, {"date": "12-30-2011", "code": "H04.129"}, {"date": "12-30-2011", "code": "H02.109"}], "RX_record": [], "PROC_record": [{"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
