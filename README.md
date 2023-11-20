@@ -1,10 +1,10 @@
 # Frontend 
 
-## https://paraknowledge.ai
+## [ParaKnowledge AI](https://paraknowledge.ai)
 
-Visit for making new username and retreiving api-key. Contact research@paraknowledge.ai for support.
- 
-![https://paraknowledge.ai](./frontend.png?raw=true)
+For creating a new username and retrieving an API key, visit [ParaKnowledge AI](https://paraknowledge.ai). For support, contact [research@paraknowledge.ai](mailto:research@paraknowledge.ai).
+
+![ParaKnowledge AI](./frontend.png?raw=true)
 
 
 # `zcor_predict`
@@ -145,10 +145,14 @@ curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P281099652
 In the above calls, replace `APIKEY` with a valid key. 
 
 
-### Estimated Performance
 
-- IPF - 88% AUC for predicting risk of IPF diagnosis 1 year ahead. [Onishchenko et al., Nature Medicine](https://www.science.org/doi/10.1126/sciadv.abf0354)
-- ASD - 80% AUC for predicting risk of future ASD diagnosis in 2-year-olds. [Onishchenko et al., Science Advances](https://www.science.org/doi/10.1126/sciadv.abf0354)
-- ADRD - 88% AUC for predicting risk of ADRD diagnosis 1 year ahead.
+### Pricing
 
+For information on pricing and plans, please contact our support team at [research@paraknowledge.ai](mailto:research@paraknowledge.ai). We offer various pricing models to cater to different needs, including per-use, subscription-based, and enterprise solutions.
+
+### Additional Information
+
+- Regular updates and maintenance schedules are posted on our [website](https://paraknowledge.ai).
+- For API integration and technical queries, consult our detailed [API Documentation](#).
+- Users are encouraged to report any bugs or issues via our support email.
 
