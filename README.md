@@ -106,7 +106,9 @@ We recommend that for relable prediction, use decision thersholds greater than 9
         "DX_record": [
             {"date": "07-31-2006", "code": "Z38.00"},
             {"date": "08-07-2006", "code": "P59.9"},
-            {"date": "08-29-2016", "code": "J01.90"}
+            {"date": "08-29-2016", "code": "J01.90"},
+            {"date": "09-10-2016", "code": "J01.90"},
+            {"date": "11-14-2016", "code": "J01.91"}
         ],
         "RX_record": [
             {"date": "10-29-2011", "code": "rxLDA017"},
@@ -128,7 +130,7 @@ We recommend that for relable prediction, use decision thersholds greater than 9
 
 
 ```
-curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P000012", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "01-08-2010", "code": "M15.9"}, {"date": "01-08-2010", "code": "I51.9"}], "RX_record": [], "PROC_record": [{"date": "12-30-2011", "code": "92014"},{"date": "09-28-2012", "code": "72170"}, {"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
+curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P000012", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "01-05-2012", "code": "G35"}, {"date": "02-02-2012", "code": "H35.359"}, {"date": "03-29-2012", "code": "G35"}, {"date": "04-05-2012", "code": "R94.09"}, {"date": "04-05-2012", "code": "G35"}, {"date": "06-21-2012", "code": "G35"}], "RX_record": [], "PROC_record": [{"date": "03-29-2012", "code": "72170"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
 ```
 
 Replace `APIKEY` with a valid key. 
