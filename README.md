@@ -82,6 +82,13 @@ EHR-based predictive algorithm to screen for a range of disorders. Currently, th
 - ASD (Autism Spectrum Disorder)
 - ADRD (Alzheimer's Disease and Related Dementias)
 
+### Estimated Performance
+
+- IPF - 88% AUC for predicting risk of IPF diagnosis 1 year ahead. [Onishchenko et al., Nature Medicine](https://www.science.org/doi/10.1126/sciadv.abf0354)
+- ASD - 80% AUC for predicting risk of future ASD diagnosis in 2-year-olds. [Onishchenko et al., Science Advances](https://www.science.org/doi/10.1126/sciadv.abf0354)
+- ADRD - 88% AUC for predicting risk of ADRD diagnosis 1 year ahead.
+
+
 ## Quickstart for `zcor_predict`
 
 `zcor_predict` is deployed as a cloud function, accessible at:
