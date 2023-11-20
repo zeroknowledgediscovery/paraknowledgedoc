@@ -12,7 +12,8 @@ For creating a new username and retrieving an API key, visit [ParaKnowledge AI](
 `zcor_predict` is an EHR-based predictive algorithm designed to screen for a range of disorders using electronic health records. This tool currently supports screening for the following targets:
 
 - IPF (Idiopathic Pulmonary Fibrosis)
-- ASD (Autism Spectrum Disorder)
+- ILD (Interstitial Lung Disease)
+- ASD (Autism Spectrum Disorder, only for young children)
 - ADRD (Alzheimer's Disease and Related Dementia) pending
 
 ## Quickstart for `zcor_predict`
