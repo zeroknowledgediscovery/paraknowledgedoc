@@ -3,16 +3,15 @@
 ![https://paraknowledge.ai](./frontend.png?raw=true)
 
 
-# zcor_predict
+# `zcor_predict` Quickstart
 
 
 
-# **Input guide for `zcor_predict`**
+## Input Structure  for `zcor_predict`
 
-Input format is the json object that constitutes a list of dictionaries, each dictionary contains 
-records of a single patient.
+Input format is a json object that constitutes a list of dictionaries, each dictionary containing a single patient record
 
-### Contents of patient records
+###  input json
 * `patient_id` 
 * `birth_date` - in "MM-DD-YYYY" format.
 * `sex` (optional) In case of absent `sex` in json, it is assumed to be "F".
@@ -27,8 +26,8 @@ and the date of diagnosis (`date`).
 * `patient_id`, `birth_date`, and `DX_record` are necessary.
 * `DX_record` must contain at least 2 diagnosis codes recorded at least 1 week apart.
 
+### Example 1: input with a single patient:
 
-An example input with a single patient:
 ```json
 [
     { 
@@ -54,6 +53,23 @@ An example input with a single patient:
 ]
 ```
 
+
+### Example 2
+
+```
+curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "12-16-2011", "code": "R09.02"}, {"date": "12-30-2011", "code": "H04.129"}, {"date": "12-30-2011", "code": "H02.109"}], "RX_record": [], "PROC_record": [{"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
+```
+
+
+```
+curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "01-08-2010", "code": "M15.9"}, {"date": "01-08-2010", "code": "I51.9"}], "RX_record": [], "PROC_record": [{"date": "12-30-2011", "code": "92014"},{"date": "09-28-2012", "code": "72170"}, {"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
+```
+
+```
+curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201","birth_date": "01-01-1921", "DX_record": [{"date": "01-08-2010", "code": "M15.9"}, {"date": "01-08-2010", "code": "I51.9"}], "RX_record": [], "PROC_record": []}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
+```
+
+
 ### Estimated performance
 
 IPF - 88% AUC For predicting risk of IPF diagnosis 1 year ahead. [(Onishchenko et al., Nature Medicine)](https://www.science.org/doi/10.1126/sciadv.abf0354)
@@ -62,18 +78,3 @@ ASD - 80% AUC For predicting risk of future ASD diagnosis in 2 year olds. [(Onis
 
 ADRD - 88% AUC For predicting risk of ADRD diagnosis 1 year ahead.
 
-
-
-
-```
-curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "12-16-2011", "code": "R09.02"}, {"date": "12-30-2011", "code": "H04.129"}, {"date": "12-30-2011", "code": "H02.109"}], "RX_record": [], "PROC_record": [{"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=7eea9f70d79c408f2b69847d6911303c"
-```
-
-
-```
-curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "01-08-2010", "code": "M15.9"}, {"date": "01-08-2010", "code": "I51.9"}], "RX_record": [], "PROC_record": [{"date": "12-30-2011", "code": "92014"},{"date": "09-28-2012", "code": "72170"}, {"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=7eea9f70d79c408f2b69847d6911303c"
-```
-
-```
-curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201","birth_date": "01-01-1921", "DX_record": [{"date": "01-08-2010", "code": "M15.9"}, {"date": "01-08-2010", "code": "I51.9"}], "RX_record": [], "PROC_record": []}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=7eea9f70d79c408f2b69847d6911303c"
-```
