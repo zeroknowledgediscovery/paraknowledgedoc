@@ -1,7 +1,10 @@
-# Frontend https://paraknowledge.ai
+# Frontend 
+
+## https://paraknowledge.ai
+
+Vi
  
 ![https://paraknowledge.ai](./frontend.png?raw=true)
-
 
 
 # `zcor_predict`
