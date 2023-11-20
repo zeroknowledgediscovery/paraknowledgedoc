@@ -2,7 +2,7 @@
 
 ## https://paraknowledge.ai
 
-Vi
+Visit for making new username and retreiving api-key. Contact research@paraknowledge.ai for support.
  
 ![https://paraknowledge.ai](./frontend.png?raw=true)
 
