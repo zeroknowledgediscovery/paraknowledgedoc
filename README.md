@@ -87,54 +87,11 @@ The service returns a JSON object with predictions, structured as follows:
 In this structure, `TARGET` will be either `IPF` or `ASD`, depending on the specified target in the request. Each entry in the `predictions` array corresponds to a patient's risk prediction for the specified disorder.
 
 
-#### Inetrpretation
+#### Interpretation
 
 The `probability` is the probability of a patient to experience the target disorder in near future (the length of this future depends on teh model, but currently the "prediction window" is 1 year).
 We recommend that for relable prediction, use decision thersholds greater than 90% or higher on this estimated probability.
 
-
----
-
-This README and quickstart guide provides a comprehensive overview of how to use the `zcor_predict` service, including details on input and output formats, and the URL endpoint for accessing the service.
-
-# `zcor_predict`
-
-EHR-based predictive algorithm to screen for a range of disorders. Currently, the following targets are available:
-
-- IPF (Idiopathic Pulmonary Fibrosis)
-- ASD (Autism Spectrum Disorder)
-- ADRD (Alzheimer's Disease and Related Dementias)
-
-### Estimated Performance
-
-- IPF - 88% AUC for predicting risk of IPF diagnosis 1 year ahead. [Onishchenko et al., Nature Medicine](https://www.science.org/doi/10.1126/sciadv.abf0354)
-- ASD - 80% AUC for predicting risk of future ASD diagnosis in 2-year-olds. [Onishchenko et al., Science Advances](https://www.science.org/doi/10.1126/sciadv.abf0354)
-- ADRD - 88% AUC for predicting risk of ADRD diagnosis 1 year ahead.
-
-
-## Quickstart for `zcor_predict`
-
-`zcor_predict` is deployed as a cloud function, accessible at:
-```
-https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=TARGET&api_key=YOUR_API_KEY
-```
-Replace `TARGET` with `IPF`, `ASD`, or `ADRD` and `YOUR_API_KEY` with your actual API key. The service responds to POST requests with patient data encoded as a JSON object.
-
-### Input Format
-
-Input should be a JSON object that consists of a list of dictionaries, each containing a single patient record. Example fields include:
-
-- `patient_id`
-- `birth_date` - in "MM-DD-YYYY" format.
-- `sex` (optional) - Defaults to "F" if absent.
-- `DX_record` - List of dictionaries with patient's diagnostic code (`code`) and diagnosis date (`date`).
-- `RX_record` (optional) - List of dictionaries with patient's prescription code (`code`) and prescription date (`date`).
-- `PROC_record` (optional) - List of dictionaries with patient's procedural code (`code`) and procedure date (`date`).
-
-### Minimum Requirements
-
-- Essential fields: `patient_id`, `birth_date`, and `DX_record`.
-- `DX_record` must have at least 2 diagnosis codes, recorded at least 1 week apart.
 
 ### Example Inputs
 
@@ -166,7 +123,7 @@ Input should be a JSON object that consists of a list of dictionaries, each cont
 ```
 
 
-### Example 2: Complete `curl` commands
+### Example 2: Complete `curl` command
 
 
 
@@ -174,11 +131,7 @@ Input should be a JSON object that consists of a list of dictionaries, each cont
 curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "01-08-2010", "code": "M15.9"}, {"date": "01-08-2010", "code": "I51.9"}], "RX_record": [], "PROC_record": [{"date": "12-30-2011", "code": "92014"},{"date": "09-28-2012", "code": "72170"}, {"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
 ```
 
-```
-curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P28109965201","birth_date": "01-01-1921", "DX_record": [{"date": "01-08-2010", "code": "M15.9"}, {"date": "01-08-2010", "code": "I51.9"}], "RX_record": [], "PROC_record": []}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
-```
-
-In the above calls, replace `APIKEY` with a valid key. 
+Replace `APIKEY` with a valid key. 
 
 
 
