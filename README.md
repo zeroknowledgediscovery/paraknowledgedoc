@@ -40,6 +40,7 @@ The input should be a JSON object that consists of a list of dictionaries. Each 
 
 - Essential fields: `patient_id`, `birth_date`, and `DX_record`.
 - `DX_record` must have at least 2 diagnosis codes, recorded at least 1 week apart.
+- We recommend a minimum 5 diagnosis codes in medical history for flags to be reliable
 
 ### Output Format
 
@@ -60,6 +61,13 @@ The service returns a JSON object with predictions, structured as follows:
 ```
 
 In this structure, `TARGET` will be either `IPF` or `ASD`, depending on the specified target in the request. Each entry in the `predictions` array corresponds to a patient's risk prediction for the specified disorder.
+
+
+#### Inetrpretation
+
+The `probability` is the probability of a patient to experience the target disorder in near future (the length of this future depends on teh model, but currently the "prediction window" is 1 year).
+We recommend that for relable prediction, use decision thersholds greater than 90% or higher on this estimated probability.
+
 
 ---
 
