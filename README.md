@@ -13,6 +13,7 @@ Visit for making new username and retreiving api-key. Contact research@paraknowl
 
 - IPF (Idiopathic Pulmonary Fibrosis)
 - ASD (Autism Spectrum Disorder)
+- ADRD (Alzheimer's Disease and Related Dementia) pending
 
 ## Quickstart for `zcor_predict`
 
