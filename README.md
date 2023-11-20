@@ -133,7 +133,16 @@ curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P281099652
 
 Replace `APIKEY` with a valid key. 
 
+### Runtime
 
+| Disease | Runtime (s) for 1 Patient | Runtime (s) for 1000 Patients |
+|:-------:|:---------------------:|:-------------------------------------:|
+|   ADRD  |        27.8825        |               1359.7784              |
+|   ASD   |        11.6790        |               371.0477               |
+|   ILD   |        26.5180        |               610.5329               |
+|   IPF   |        12.9410        |               465.9096               |
+
+For larger number of patients, the time perpatient is approximatley 1 second or less for most targets.
 
 ### Pricing
 
