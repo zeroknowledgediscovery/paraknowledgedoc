@@ -13,12 +13,14 @@ For creating a new username and retrieving an API key, visit [ParaKnowledge AI](
 
 
 ```
-curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P000012", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "12-16-2011", "code": "R09.02"}, {"date": "12-30-2011", "code": "H04.129"}, {"date": "12-30-2011", "code": "H02.109"}], "RX_record": [], "PROC_record": [{"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
+curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P000012", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "01-05-2012", "code": "G35"}, {"date": "02-02-2012", "code": "H35.359"}, {"date": "03-29-2012", "code": "G35"}, {"date": "04-05-2012", "code": "R94.09"}, {"date": "04-05-2012", "code": "G35"}, {"date": "06-21-2012", "code": "G35"}], "RX_record": [], "PROC_record": [{"date": "03-29-2012", "code": "72170"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
+
 ```
 
 
 ```
-curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P000012", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "12-16-2011", "code": "R09.02"}, {"date": "12-30-2011", "code": "H04.129"}, {"date": "12-30-2011", "code": "H02.109"}], "RX_record": [], "PROC_record": [{"date": "09-28-2012", "code": "71100"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=ILD&api_key=APIKEY"
+curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P000012", "sex": "M", "age": 89, "birth_date": "01-01-1921", "fips": "35644", "DX_record": [{"date": "01-05-2012", "code": "G35"}, {"date": "02-02-2012", "code": "H35.359"}, {"date": "03-29-2012", "code": "G35"}, {"date": "04-05-2012", "code": "R94.09"}, {"date": "04-05-2012", "code": "G35"}, {"date": "06-21-2012", "code": "G35"}], "RX_record": [], "PROC_record": [{"date": "03-29-2012", "code": "72170"}]}]' "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=ILD&api_key=APIKEY"
+
 ```
 
 Replace APIKEY with a valid api-key obtained by emailing support.
