@@ -14,6 +14,13 @@ However, the performance goes up even more, when we do employ some training as i
 <img src="roc-classifier-green.png" alt="AI Human" width="400">
 
 The basic algorithm was reported in a conference paper by Chattopadhyay and Lipson, at a time when its application in identifying AI-generated text  was
-not a topic of interest, since the current sophisticated LLMs did not yet exist..
+not a topic of interest, since the current sophisticated LLMs did not yet exist.
 
 
+```
+I. Chattopadhyay and H. Lipson, "Computing entropy rate of symbol sources & a distribution-free limit theorem," 2014 48th Annual Conference on Information Sciences and Systems (CISS), Princeton, NJ, USA, 2014, pp. 1-6, doi: 10.1109/CISS.2014.6814175.
+```
+
+## Overview of the entropr rate estimation algorithm
+
+Entropy rate of sequential data-streams naturally quantifies the complexity of the generative process. Thus entropy rate fluctuations could be used as a tool to recognize dynamical perturbations in signal sources, and could potentially be carried out without explicit background noise characterization. However, state of the art algorithms to estimate the entropy rate have markedly slow convergence; making such entropic approaches non-viable in practice. We present here a fundamentally new approach to estimate entropy rates, which is demonstrated to converge significantly faster in terms of input data lengths, and is shown to be effective in diverse applications ranging from the estimation of the entropy rate of English texts to the estimation of complexity of chaotic dynamical systems. Additionally, the convergence rate of entropy estimates do not follow from any standard limit theorem, and reported algorithms fail to provide any confidence bounds on the computed values. Exploiting a connection to the theory of probabilistic automata, we establish a convergence rate of O(log|s|/3√|s|) as a function of the input length |s|, which then yields explicit uncertainty estimates, as well as required data lengths to satisfy pre-specified confidence bounds.
