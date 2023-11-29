@@ -11,7 +11,7 @@ an entropy rate of 1 bit / letter (`Shannon, Claude E. "Prediction and entropy o
 
  
 
-<img src="roc-classifier.png" alt="AI Human" width="400">
+<img src="roc-classifier-green.png" alt="AI Human" width="400">
 
 
 
