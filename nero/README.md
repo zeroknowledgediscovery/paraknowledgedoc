@@ -5,7 +5,6 @@
 
 ```
 curl -X POST -F "file=@FILEPATH" "https://us-central1-pkcsaas-01.cloudfunctions.net/nero?api_key=APIKEY"
-
 ```
 
 <img src="roc-entropy.png" alt="AI Human" width="400" >
