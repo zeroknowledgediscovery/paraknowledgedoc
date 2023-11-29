@@ -1,6 +1,6 @@
 ## NERO: Non-parametric Entropy Rate Oracle
 
-<img src="roc-entropy.png" alt="AI Human" width="300" >
+<img src="roc-entropy.png" alt="AI Human" width="400" >
 
 ## Description
 
@@ -9,9 +9,9 @@ We hypothesize that human generated content has a higher entropy rate. Shannon's
 an entropy rate of 1 bit / letter (`Shannon, Claude E. "Prediction and entropy of printed English." Bell system technical journal 30, no. 1 (1951): 50-64.`), and we show that AI generated content typically has much less.
 
 
+ 
 
-
-<img src="roc-classifier.png" alt="AI Human" width="300">
+<img src="roc-classifier.png" alt="AI Human" width="400">
 
 
 
