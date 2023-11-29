@@ -1,6 +1,6 @@
 ## NERO: Non-parametric Entropy Rate Oracle
 
-<img src="docs/ai_human.png" alt="AI Human" width="300" height="300">
+<img src="roc-single.png" alt="AI Human" width="300" height="300">
 
 ## Description
 
@@ -11,7 +11,7 @@ an entropy rate of 1 bit / letter (`Shannon, Claude E. "Prediction and entropy o
 
 
 
-<img src="docs/res.png" alt="AI Human" width="800">
+<img src="roc-single-notrain.png" alt="AI Human" width="800">
 
 
 
