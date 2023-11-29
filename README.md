@@ -23,6 +23,11 @@ curl -X POST -H "Content-Type: application/json" -d '[{"patient_id": "P000012", 
 
 ```
 
+```
+curl -s -X POST -H "Content-Type: application/json" -d @sampledata/patients_10.json "https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=IPF&api_key=APIKEY"
+```
+
+
 Replace APIKEY with a valid api-key obtained by emailing support.
 
 # Introduction 
