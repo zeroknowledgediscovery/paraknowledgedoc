@@ -13,6 +13,7 @@ However, the performance goes up even more, when we do employ some training as i
 
 <img src="roc-classifier-green.png" alt="AI Human" width="400">
 
-
+The basic algorithm was reported in a conference paper by Chattopadhyay and Lipson, at a time when its application in identifying AI-generated text  was
+not a topic of interest, since the current sophisticated LLMs did not yet exist..
 
 
