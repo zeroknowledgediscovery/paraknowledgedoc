@@ -1,6 +1,6 @@
 ## NERO: Non-parametric Entropy Rate Oracle
 
-<img src="roc-entropy.png" alt="AI Human" width="300" height="300">
+<img src="roc-entropy.png" alt="AI Human" width="300" >
 
 ## Description
 
