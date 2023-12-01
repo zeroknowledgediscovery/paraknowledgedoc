@@ -97,8 +97,8 @@ In this structure, `TARGET` will be either `IPF` or `ASD`, depending on the spec
 
 ### Interpretation
 
-The `probability` is the probability of a patient to experience the target disorder in near future (the length of this future depends on teh model, but currently the "prediction window" is 1 year).
-We recommend that for relable prediction, use decision thersholds greater than 90% or higher on this estimated probability.
+The `probability` is the probability of a patient to experience the target disorder in near future  (the length of this future depends on the model, but currently the "prediction window" is 1 year).
+We recommend that for relable prediction, use decision thersholds `greater than 90%` or higher on this estimated probability.
 
 
 ### Example Inputs
