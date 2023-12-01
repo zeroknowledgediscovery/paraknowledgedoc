@@ -103,7 +103,7 @@ We recommend that for relable prediction, use decision thersholds greater than 9
 
 ### Example Inputs
 
-#### Example 1: json input for Single Patient
+#### json input for Single Patient
 
 ```json
 [
