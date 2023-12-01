@@ -95,7 +95,7 @@ The service returns a JSON object with predictions, structured as follows:
 In this structure, `TARGET` will be either `IPF` or `ASD`, depending on the specified target in the request. Each entry in the `predictions` array corresponds to a patient's risk prediction for the specified disorder.
 
 
-#### Interpretation
+### Interpretation
 
 The `probability` is the probability of a patient to experience the target disorder in near future (the length of this future depends on teh model, but currently the "prediction window" is 1 year).
 We recommend that for relable prediction, use decision thersholds greater than 90% or higher on this estimated probability.
