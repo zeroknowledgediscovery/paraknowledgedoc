@@ -57,6 +57,15 @@ https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict?target=TARGET&api
 
 Replace `TARGET` with either `IPF` or `ASD`, and `YOUR_API_KEY` with your actual API key. The service responds to POST requests containing patient data encoded as a JSON object.
 
+
+### Ultra-fast In-memory Implementation 
+
+`zcor_predict_fast` 
+
+```
+https://us-central1-pkcsaas-01.cloudfunctions.net/zcor_predict_fast?target=TARGET&api_key=YOUR_API_KEY
+```
+
 ### Input Format
 
 The input should be a JSON object that consists of a list of dictionaries. Each dictionary contains a single patient record with the following fields:
