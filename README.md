@@ -7,7 +7,6 @@ For creating a new username and retrieving an API key, visit [ParaKnowledge AI](
 
 # `zcor_predict`
 
-## Quickstart
 
 ### Single Patient IPF target
 
