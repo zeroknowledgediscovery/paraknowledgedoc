@@ -1,6 +1,6 @@
 # Frontend 
 
-## [ParaKnowledge AI](https://paraknowledge.ai)
+## [ParaKnowledge Corporation](https://paraknowledge.ai)
 
 For creating a new username and retrieving an API key, visit [ParaKnowledge AI](https://paraknowledge.ai). For support, contact [research@paraknowledge.ai](mailto:research@paraknowledge.ai).
 
